@@ -11,7 +11,7 @@ const AgeRating = ({ data }) => {
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
         <div className={styles.agerating}>
           <h1 className={styles.title}>
-            {content.title}
+            Rating {content.title}
           </h1>
         </div>
         <div className={styles.description}>
