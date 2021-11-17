@@ -34,13 +34,13 @@ export default class MyDocument extends Document {
             s1.async=true;
             s1.src='https://embed.tawk.to/618820a76885f60a50bab91d/1fjtrv3j1';
             s1.charset='UTF-8';
-            s1.setAttribute('crossorigin','*');
+            s1.setAttribute('crossOrigin','*');
             s0.parentNode.insertBefore(s1,s0);})();`,
           }}
           />
 
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1446177920850529"
-            crossorigin="anonymous"></script>
+            crossOrigin="anonymous"></script>
 
         </Head>
         <body>
