@@ -11,6 +11,7 @@ import SmallCardList from "./SmallCardList"
 const resolveDirectors = {
   en: 'Directors',
   nl: 'Regisseurs',
+  de: 'Direktoren'
 }
 
 const resolveWriters = {

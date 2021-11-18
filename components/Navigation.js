@@ -4,18 +4,22 @@ const Navigation = ({ locale, locales }) => {
   const resolveMovies = {
     en: 'Movies',
     nl: 'Films',
+    de: 'Filme'
   }
   const resolvePeople = {
     en: 'People',
     nl: 'Mensen',
+    de: 'Menschen'
   }
   const resolveNews = {
     en: 'News',
     nl: 'Nieuws',
+    de: 'Nachrichten'
   }
   const resolveMerchandise = {
     en: 'Shop',
     nl: 'Winkel',
+    de: 'Geschäft'
   }
   let homeurl="/";
   if(locale!='default'){
