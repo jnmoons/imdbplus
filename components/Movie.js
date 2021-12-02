@@ -106,9 +106,11 @@ const Movie = ({ data, level }) => {
           <div className={styles.imagegallery}>
             <InPageSlideshow pictures={pictures}></InPageSlideshow>
           </div>
-
+          <div className={styles.score}>
+            IMDBPlus Score {content.score}
+          </div>
           <div className={styles.short}>
-            {render(content.short)}
+            {render(content.introduction)}
           </div>
           <div className={styles.synopsis}>
             {render(content.synopsis)}

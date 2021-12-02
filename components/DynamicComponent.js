@@ -26,6 +26,8 @@ import Title from './Title'
 import TopMovies from './TopMovies'
 import Agerating from './AgeRating'
 import AgeRating from './AgeRating'
+import City from './City'
+import CityList from './CityList'
 
 const Components = {
   'teaser': Teaser,
@@ -54,7 +56,9 @@ const Components = {
   'twocol':TwoCol,
   'title':Title,
   'topmovies':TopMovies,
-  'agerating':AgeRating
+  'agerating':AgeRating,
+  'city':City,
+  'citylist':CityList
 }
 
 
