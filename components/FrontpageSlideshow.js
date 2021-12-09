@@ -63,11 +63,11 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style">
-        {newsitems.map((item) => {
+        {newsitems.map((item, index) => {
           const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
           return (
             <a
-              href={`${lang}/newsitem/${item.slug}`}
+              href={`${lang}/newsitem/${item.slug}`} key={index}
             >
               <div className={styles.item}>
                 <div className={styles.mainpicture} style={{ backgroundImage: `url("${item.content.mainpicture.filename}")` }}>

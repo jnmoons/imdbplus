@@ -43,7 +43,7 @@ const Personality = ({ data, level }) => {
           </h1>
           <div className={styles.countrylist}>
             {countries.map((item, index) => (
-              <div className={styles.country}>
+              <div className={styles.country} key={index}>
                 <img src={item.content.flag.filename}></img>
               </div>
             ))}

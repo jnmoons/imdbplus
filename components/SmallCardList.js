@@ -27,10 +27,10 @@ const SmallCardList = ({ items, title, type }) => {
     <div className={styles.itemgallery}>
       {title&&title!=""&&<div className={styles.title}>{title}</div>}
       <div className={styles.gallerycontent}>
-      {items.map((item) => {
+      {items.map((item, index) => {
         const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
         return (
-          <div className={styles.smallcardwrapper}>
+          <div className={styles.smallcardwrapper} key={index}>
             {type == "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} price={item.content.price} />}
             {type != "product" && <SmallCard lang={lang} title={item.content.title} picture={item.content.mainpicture.filename} url={item.full_slug} type={type} />}
           </div>

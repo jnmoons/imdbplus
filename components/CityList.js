@@ -18,7 +18,7 @@ const CityList = ({ data, level, locale }) => {
   return (
     <div className={styles.list}>
       <div>
-        {items && items.length > 0 && <SmallCardList items={items} type="movie"></SmallCardList>}
+        <SmallCardList items={items} type="movie"></SmallCardList>
       </div>
     </div>
 

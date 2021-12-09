@@ -1,14 +1,14 @@
 import React, { useState } from "react"
 import SbEditable from "storyblok-react"
 import { render } from "storyblok-rich-text-react-renderer"
-import styles from "../styles/City.module.scss"
+import styles from "../styles/Restaurant.module.scss"
 import { getData } from "../utils/storyblok"
 import RelatedItemGallerySmall from "./RelatedItemGallerySmall"
 import RelatedItemGallery from "./RelatedItemGallery"
 import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 
-const City = ({ data, level }) => {
+const Restaurant = ({ data, level }) => {
   var locale = 'en';
   //enriching data
   if (level === 'data') {
@@ -18,11 +18,11 @@ const City = ({ data, level }) => {
     var content = data;
   }
 
-  const [restaurants, setRestaurants] = useState([]);
-  getData(data.story.uuid, data.story.lang, content.preview = false, 'restaurant', 'city').then(
-    function (result) {
-      setRestaurants(result.data.stories);
+  if (content.city) {
+    var cities = data.rels.filter(obj => {
+      return content.city.includes(obj.uuid);
     });
+  }
 
 
   //returning the HTML
@@ -30,22 +30,22 @@ const City = ({ data, level }) => {
     <SbEditable content={content} key={content._uid}>
       <main>
         {/* <div className={[styles.movie, styles.test].join(' ')}> */}
-        <div className={styles.city}>
+        <div className={styles.restaurant}>
           <h1 className={styles.title}>
             {content.title}
           </h1>
           <div className={styles.mainpicture} style={{ backgroundImage: `url("${content.mainpicture.filename}")` }}></div>
-          <div className={styles.population}>
-            Population {content.population}
+          <div className={styles.short}>
+            {render(content.short)}
           </div>
           <div className={styles.description}>
             {render(content.description)}
           </div>
-          {restaurants&&restaurants.length>0&&<RelatedItemGallery items={restaurants} title="Restaurants" type="restaurant"></RelatedItemGallery>}
+          {cities && cities.length > 0 && <SmallCardList items={cities} title={"City"} type="city"></SmallCardList>}
         </div>
-      </main> 
+      </main>
     </SbEditable>
   )
 }
 
-export default City
+export default Restaurant

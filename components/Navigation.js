@@ -50,19 +50,19 @@ const Navigation = ({ locale, locales }) => {
         <div className={styles.navlinkswrapper}>
           <div className={styles.navlinks}>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
+              <a href={`${homeurl}/pages/movies`} className={styles.movie}>{resolveMovies[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
+              <a href={`${homeurl}/pages/cities`} className={styles.movie}>{resolveCities[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
+              <a href={`${homeurl}/pages/people`} className={styles.personality}>{resolvePeople[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
+              <a href={`${homeurl}/pages/news`} className={styles.newsitem}>{resolveNews[locale]}</a>
             </div>
             <div className={styles.navlink}>
-              <a href={`${defaultLocale}pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
+              <a href={`${homeurl}/pages/shop`} className={styles.product}>{resolveMerchandise[locale]}</a>
             </div>
           </div>
           <div className={styles.navlocales}>

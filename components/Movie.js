@@ -9,27 +9,32 @@ import InPageSlideshow from "./InPageSlideshow"
 import SmallCardList from "./SmallCardList"
 
 const resolveDirectors = {
+  default: 'Directors',
   en: 'Directors',
   nl: 'Regisseurs',
   de: 'Direktoren'
 }
 
 const resolveWriters = {
+  default: 'Writers',
   en: 'Writers',
   nl: 'Schrijvers',
 }
 
 const resolveStars = {
+  default: 'Stars',
   en: 'Stars',
   nl: 'Sterren',
 }
 
 const resolveMerchandise = {
+  default: 'Merchandise',
   en: 'Merchandise',
   nl: 'Producten',
 }
 
 const resolveNews = {
+  default: 'News',
   en: 'News',
   nl: 'Nieuws',
 }
@@ -89,14 +94,14 @@ const Movie = ({ data, level }) => {
           </h1>
           <div className={styles.genrelist}>
             {genres.map((item, index) => (
-              <div className={styles.genre}>
+              <div className={styles.genre} key={item.content._uid}>
                 {item.content.title}
               </div>
             ))}
           </div>
           {ageratings && <div className={styles.ageratinglist}>
             {ageratings.map((item, index) => (
-              <a href={`/${item.full_slug}`}><div className={styles.agerating}>
+              <a href={`/${item.full_slug}`} key={item.content._uid}><div className={styles.agerating}>
                 {item.content.title}
               </div></a>
             ))}

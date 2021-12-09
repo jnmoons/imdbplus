@@ -5,7 +5,6 @@ import styles from "../styles/SmallCard.module.scss"
 
 
 const SmallCard = ({ lang, title, short, picture, url, type, price }) => {
-
   return (
     <a href={`/${url}`} className={`bg-shadow-${type} ${styles.item}`}>
       <div >
