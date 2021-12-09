@@ -35,7 +35,7 @@ const City = ({ data, level }) => {
             {render(content.description)}
           </div>
         </div>
-      </main>
+      </main> 
     </SbEditable>
   )
 }
