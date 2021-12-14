@@ -29,6 +29,7 @@ import AgeRating from './AgeRating'
 import City from './City'
 import CityList from './CityList'
 import Restaurant from './Restaurant'
+import ThreeCol from './ThreeCol'
 
 const Components = {
   'teaser': Teaser,
@@ -60,7 +61,8 @@ const Components = {
   'agerating':AgeRating,
   'city':City,
   'citylist':CityList,
-  'restaurant':Restaurant
+  'restaurant':Restaurant,
+  'threecol': ThreeCol
 }
 
 
