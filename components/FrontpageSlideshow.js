@@ -38,11 +38,11 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
     var content = data;
   }
 
-  const [newsitems, setNewsitems] = useState([]);
+  const [fpsitems, setFpsItems] = useState([]);
 
-  getFPSData(content._uid, locale, content.preview = false, 'newsitem').then(
+  getFPSData(content._uid, locale, content.preview = false, 'city').then(
     function (result) {
-      setNewsitems(result.data.stories);
+      setFpsItems(result.data.stories);
     });
 
 
@@ -59,11 +59,11 @@ const FrontpageSlideshow = ({ data, level, locale }) => {
         autoPlay={true}
         autoPlaySpeed={5000}
         keyBoardControl={true}
-        customTransition="all 0.5s ease-in-out"
+        customTransition="all 0.2s ease-in-out"
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         dotListClass="custom-dot-list-style">
-        {newsitems.map((item, index) => {
+        {fpsitems.map((item, index) => {
           const lang = item.lang === "default" ? "/en" : `/${item.lang}`;
           return (
             <a

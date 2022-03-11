@@ -6,7 +6,7 @@ export default class MyDocument extends Document {
       <Html>
         <Head>
           {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
+          {/* <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS}`}
           />
@@ -37,7 +37,7 @@ export default class MyDocument extends Document {
             s1.setAttribute('crossOrigin','*');
             s0.parentNode.insertBefore(s1,s0);})();`,
           }}
-          />
+          /> */}
 
           <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1446177920850529"
             crossOrigin="anonymous"></script>

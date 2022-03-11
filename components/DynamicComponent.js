@@ -30,6 +30,7 @@ import City from './City'
 import CityList from './CityList'
 import Restaurant from './Restaurant'
 import ThreeCol from './ThreeCol'
+import RestaurantList from './RestaurantList'
 
 const Components = {
   'teaser': Teaser,
@@ -62,7 +63,8 @@ const Components = {
   'city':City,
   'citylist':CityList,
   'restaurant':Restaurant,
-  'threecol': ThreeCol
+  'threecol': ThreeCol,
+  'restaurantlist': RestaurantList
 }
 
 

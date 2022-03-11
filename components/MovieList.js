@@ -6,8 +6,13 @@ import { getAllItems } from "../utils/storyblok"
 import SmallCardList from "./SmallCardList"
 
 const MovieList = ({ data, level, locale }) => {
-
+  if (level === 'data') {
+    var content = data.story.content;
+  } else {
+    var content = data;
+  }
   const [sortby, setSortby] = useState();
+  
   function updateSortby(sortby){
     setSortby(sortby);
     getAllItems('movie', locale, sortby).then(

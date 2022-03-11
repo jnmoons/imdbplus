@@ -16,6 +16,10 @@
   grid-template-rows: 1fr;
   gap: 24px;
 
+  .footerlogo{
+    width: 50px;
+  }
+
   .footer {
     grid-column: 2 / span 10;
   }
